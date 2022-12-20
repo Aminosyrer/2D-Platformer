@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/GameCamera.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/DemoLevel.gd" type="Script" id=6]
+[ext_resource path="res://scenes/EnemyGoal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=8]
+
+[node name="DemoLevel" type="Node"]
+script = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 1
+format = 1
+tile_data = PoolIntArray( -327681, 3, 0, -393216, 3, 1, -262154, 3, 0, -262153, 3, 1, -262149, 3, 0, -262148, 3, 1, -262141, 3, 0, -262140, 3, 1, -131085, 2, 0, -65549, 2, 65536, 65525, 3, 0, 65526, 3, 1, 65528, 2, 0, 65530, 1, 0, 65531, 1, 1, 65534, 0, 0, 65535, 0, 1, 0, 0, 1, 1, 0, 2, 131064, 2, 65536, 131066, 1, 65536, 131067, 1, 65537, 131070, 0, 65536, 131071, 0, 65537, 65536, 0, 65537, 65537, 0, 65538, 65540, 2, 0, 65544, 3, 0, 65545, 3, 1, 196606, 0, 131072, 196607, 0, 131073, 131072, 0, 131073, 131073, 0, 131074, 131076, 2, 65536, 131084, 0, 0, 131085, 0, 1, 131086, 0, 1, 131087, 0, 1, 131088, 0, 1, 131089, 0, 1, 131090, 0, 1, 131091, 0, 2, 196620, 0, 131072, 196621, 0, 131073, 196622, 0, 131073, 196623, 0, 131073, 196624, 0, 131073, 196625, 0, 131073, 196626, 0, 131073, 196627, 0, 131074 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="GameCamera" parent="." instance=ExtResource( 1 )]
+
+[node name="Coin" parent="." instance=ExtResource( 4 )]
+position = Vector2( -160, -14 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 601, 65 )
+startDirection = 1
+
+[node name="EnemyGoal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 390, 64 )
+
+[node name="EnemyGoal2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 631, 64 )
+
+[node name="Spikes" parent="." instance=ExtResource( 8 )]
+position = Vector2( 506, 64 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -239, 1 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -320, -12 )
+
+[node name="Coin3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 579, 52 )
