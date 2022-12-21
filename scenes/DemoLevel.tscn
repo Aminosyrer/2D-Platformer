@@ -25,7 +25,10 @@ tile_data = PoolIntArray( -327681, 3, 0, -393216, 3, 1, -262154, 3, 0, -262153, 
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource( 4 )]
-position = Vector2( -160, -14 )
+position = Vector2( -240, -67 )
+
+[node name="Coin16" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( -160, -12 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 4 )]
 position = Vector2( 0, -91 )

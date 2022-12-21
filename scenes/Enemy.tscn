@@ -223,5 +223,5 @@ shape = SubResource( 44 )
 position = Vector2( 0, -30 )
 frames = SubResource( 31 )
 animation = "run"
-frame = 11
+frame = 7
 playing = true

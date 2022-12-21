@@ -101,5 +101,5 @@ shape = SubResource( 4 )
 position = Vector2( 0, -42 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 6
+frame = 3
 playing = true
